@@ -1,0 +1,12 @@
+{
+  "name": "context-curator",
+  "description": "Three-stage knowledge management for Claude Code: per-task context routing (librarian), per-session insight capture (learned), library-level consolidation (curate). Plus an init skill to scaffold the system into any project.",
+  "version": "0.1.0",
+  "author": {
+    "name": "Noah Potter"
+  },
+  "license": "MIT",
+  "homepage": "https://github.com/noahpottercomposer-glitch/context-curator",
+  "repository": "https://github.com/noahpottercomposer-glitch/context-curator",
+  "keywords": ["context", "knowledge-management", "documentation", "skills", "consolidation"]
+}

@@ -1,0 +1,14 @@
+{
+  "name": "context-curator",
+  "owner": {
+    "name": "Noah Potter"
+  },
+  "plugins": [
+    {
+      "name": "context-curator",
+      "source": "./",
+      "version": "0.1.0",
+      "description": "Three-stage knowledge management for Claude Code: librarian / learned / curate, plus init to scaffold a fresh project."
+    }
+  ]
+}
