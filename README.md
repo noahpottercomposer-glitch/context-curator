@@ -1,5 +1,7 @@
 # Context Curator
 
+Context Curator is a Claude Code plugin that keeps project knowledge useful by routing only the most relevant guides and memory into context for each task. It creates a closed loop: /librarian finds what Claude should load, /learned captures new session insights, and /curate promotes useful tactical notes into durable documentation. Its key differentiators are freshness checks, metrics for whether the library is actually changing behavior, and a strong “NO COVERAGE” state that forces undocumented work to be captured instead of lost. The system is project-portable because the protocol lives in the plugin while each project’s routing lives in its own routing.yaml.
+
 Three-stage knowledge management for Claude Code, built around the insight that **finite context is the binding constraint** of working with an LLM. Most projects either flood the context window with everything or starve Claude of the rules it needs. This plugin gives you a closed loop:
 
 - **`/context-curator:librarian <topic>`** — per-task context routing. Returns the minimal set of guides + memory to load before starting work. FIRST step of every task.
