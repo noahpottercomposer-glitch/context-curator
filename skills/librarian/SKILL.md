@@ -32,7 +32,7 @@ To add a topic, alias, or change a load list, edit `routing.yaml`. Do NOT re-int
 10. **Append the health footer** — always. Count pending tactical docs, days since last consolidation, undocumented topics.
 11. **Do not block on failure.** If matching fails for any reason, fall back to the nearest topic and clearly note the gap. The knowledge system is fail-open.
 
-After returning the response, the main session should actually `Read` the listed files. The librarian's job is routing, not reading — though you can offer to read them if the user explicitly asks. Exceptions: step 2 (reads the routing config), step 5 (reads memory frontmatter for freshness), and step 6 (interrogates user).
+After returning the routing response, **immediately continue in the same turn**: `Read` every file in the load list (in order), then address the user's original request. Do NOT stop after emitting the routing block — the routing block is a preamble, not the response. The skill is not done until the user's actual question is answered. Exceptions: if the user explicitly typed `/librarian <topic>` with no other question (i.e. they just want the routing output), stop after the routing block.
 
 ## FRESHNESS MODEL
 
@@ -125,7 +125,7 @@ Pick one shape based on the routing result.
 ### Key invariants for this area
 - <1-3 bullets pulled from the loaded files>
 
-Proceed with task.
+Proceed with task. **[Main session: read the files above, then answer the user's request.]**
 
 --- library status ---
 Tactical docs pending: <N>
