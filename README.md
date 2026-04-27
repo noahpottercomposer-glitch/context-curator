@@ -35,7 +35,7 @@ cd ~/your/project
 
 ```
 cd ~/your/project
-/plugin marketplace add github:noahpottercomposer-glitch/context-curator
+/plugin marketplace add github:noahdpotter/context-curator
 /plugin install context-curator@<auto-derived-marketplace-name>
 ```
 
